@@ -1,0 +1,6 @@
+{
+  "name": "Dentistas por Chile | Implantes y Urgencias en Providencia",
+  "description": "Clínica dental en Providencia con 15 años de experiencia. Implantes, urgencias el mismo día y evaluación con especialista sin costo. A pasos de Metro Salvador.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

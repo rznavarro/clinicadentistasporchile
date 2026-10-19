@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-brand-primary: #1D4ED8;
+  --color-brand-deep: #0B38B4;
+  --color-brand-navy: #243E85;
+  --color-brand-ice: #EEF5FF;
+  --color-brand-text: #11181C;
+  --color-brand-muted: #71717A;
+  --color-brand-border: #E4E4E4;
+  --color-brand-urgency: #B71C1C;
+  --color-brand-urgency-bg: #FEF2F2;
+  --color-brand-whatsapp: #25D366;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #11181C;
+  background-color: #FFFFFF;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes gentleFloatReverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes whatsappPulse {
+  0%, 85%, 100% {
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    transform: scale(1);
+  }
+  90% {
+    box-shadow: 0 0 24px rgba(37, 211, 102, 0.7);
+    transform: scale(1.04);
+  }
+}
+
+@keyframes redPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
+}
+
+.animate-float {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: gentleFloatReverse 7s ease-in-out infinite;
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsappPulse 6s ease-in-out infinite;
+}
+
+.animate-red-pulse {
+  animation: redPulse 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-float, .animate-float-reverse, .animate-whatsapp-pulse, .animate-red-pulse {
+    animation: none !important;
+    transform: none !important;
+  }
+}
